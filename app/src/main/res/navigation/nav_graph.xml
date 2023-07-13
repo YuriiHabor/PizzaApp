@@ -1,6 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph">
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/starterFragment">
 
+    <fragment
+        android:id="@+id/starterFragment"
+        android:name="com.example.pizzaapp.StarterFragment"
+        android:label="StarterFragment" >
+        <action
+            android:id="@+id/action_starterFragment_to_pizzaMenuFragment"
+            app:destination="@id/pizzaMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/extraFillingsFragment"
+        android:name="com.example.pizzaapp.ExtraFillingsFragment"
+        android:label="ExtraFillingsFragment" >
+        <action
+            android:id="@+id/action_extraFillingsFragment_to_pickupFragment"
+            app:destination="@id/pickupFragment" />
+        <action
+            android:id="@+id/action_extraFillingsFragment_to_starterFragment"
+            app:destination="@id/starterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pickupFragment"
+        android:name="com.example.pizzaapp.PickupFragment"
+        android:label="PickupFragment" >
+        <action
+            android:id="@+id/action_pickupFragment_to_userFragment"
+            app:destination="@id/userFragment" />
+        <action
+            android:id="@+id/action_pickupFragment_to_starterFragment"
+            app:destination="@id/starterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pizzaMenuFragment"
+        android:name="com.example.pizzaapp.PizzaMenuFragment"
+        android:label="PizzaMenuFragment" >
+        <action
+            android:id="@+id/action_pizzaMenuFragment_to_sizeAndQuantityFragment"
+            app:destination="@id/sizeAndQuantityFragment" />
+        <action
+            android:id="@+id/action_pizzaMenuFragment_to_starterFragment"
+            app:destination="@id/starterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sizeAndQuantityFragment"
+        android:name="com.example.pizzaapp.SizeAndQuantityFragment"
+        android:label="SizeAndQuantityFragment" >
+        <action
+            android:id="@+id/action_sizeAndQuantityFragment_to_extraFillingsFragment"
+            app:destination="@id/extraFillingsFragment" />
+        <action
+            android:id="@+id/action_sizeAndQuantityFragment_to_starterFragment"
+            app:destination="@id/starterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/summaryFragment"
+        android:name="com.example.pizzaapp.SummaryFragment"
+        android:label="SummaryFragment" >
+        <action
+            android:id="@+id/action_summaryFragment_to_starterFragment"
+            app:destination="@id/starterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.example.pizzaapp.UserFragment"
+        android:label="UserFragment" >
+        <action
+            android:id="@+id/action_userFragment_to_summaryFragment"
+            app:destination="@id/summaryFragment" />
+        <action
+            android:id="@+id/action_userFragment_to_starterFragment"
+            app:destination="@id/starterFragment" />
+    </fragment>
 </navigation>
