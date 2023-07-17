@@ -1,6 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".SizeAndQuantityFragment">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/set_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="@string/set_quantity"
+                android:textAppearance="?attr/textAppearanceHeadline4" />
+
+            <Button
+                android:id="@+id/minus_button"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/set_quantity"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:text="-"/>
+
+            <TextView
+                android:id="@+id/quantity_text_view"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/minus_button"
+                app:layout_constraintTop_toTopOf="@id/minus_button"
+                android:layout_marginStart="16dp"
+                android:text="1"
+                android:textAlignment="center"
+                android:textSize="32sp"/>
+
+            <Button
+                android:id="@+id/plus_button"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/quantity_text_view"
+                app:layout_constraintTop_toTopOf="@id/minus_button"
+                android:layout_marginStart="16dp"
+                android:text="+"/>
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:padding="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/minus_button">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/choose_size"
+                    android:textAppearance="?attr/textAppearanceHeadline4" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp">
+
+                    <RadioButton
+                        android:id="@+id/small_radio_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="@string/small" />
+
+                    <RadioButton
+                        android:id="@+id/medium_radio_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/medium" />
+
+                    <RadioButton
+                        android:id="@+id/big"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/big" />
+                </RadioGroup>
+
+                <Button
+                    android:id="@+id/next_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/next" />
+
+                <Button
+                    android:id="@+id/back_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/back" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/cancel_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/constraint"
+                app:layout_constraintTop_toBottomOf="@id/linearLayout"
+                android:text="@string/cancel_order"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
