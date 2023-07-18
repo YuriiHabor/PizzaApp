@@ -1,6 +1,187 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ExtraFillingsFragment">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/extra_filling_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="@string/extra_fillings"
+                android:textAppearance="?attr/textAppearanceHeadline4"/>
+
+            <TextView
+                android:id="@+id/cheeses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cheeses"
+                android:textAppearance="?attr/textAppearanceHeadline5"/>
+
+            <CheckBox
+                android:id="@+id/mozzarella"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/mozzarella"/>
+
+            <CheckBox
+                android:id="@+id/feta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/feta"/>
+
+            <CheckBox
+                android:id="@+id/sologuni"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sologuni"/>
+
+            <TextView
+                android:id="@+id/fruits_and_vegetables"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fruits_and_vegetables"
+                android:textAppearance="?attr/textAppearanceHeadline5"/>
+
+            <CheckBox
+                android:id="@+id/mushrooms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/mushrooms"/>
+
+            <CheckBox
+                android:id="@+id/tomatoes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tomatoes" />
+
+            <CheckBox
+                android:id="@+id/corn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/corn"/>
+
+            <CheckBox
+                android:id="@+id/cucumbers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cucumbers"/>
+
+            <CheckBox
+                android:id="@+id/lettuce"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lettuce"/>
+
+            <CheckBox
+                android:id="@+id/pineapple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pineapple"/>
+
+            <CheckBox
+                android:id="@+id/peach"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/peach"/>
+
+            <TextView
+                android:id="@+id/meat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/meat"
+                android:textAppearance="?attr/textAppearanceHeadline5"/>
+
+            <CheckBox
+                android:id="@+id/salami"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/salami"/>
+
+            <CheckBox
+                android:id="@+id/sausage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sausage"/>
+
+            <CheckBox
+                android:id="@+id/beef"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/beef"/>
+
+            <CheckBox
+                android:id="@+id/chicken"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/chicken"/>
+
+            <TextView
+                android:id="@+id/fish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fish"
+                android:textAppearance="?attr/textAppearanceHeadline5"/>
+
+            <CheckBox
+                android:id="@+id/salmon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/salmon"/>
+
+            <CheckBox
+                android:id="@+id/tuna"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tuna"/>
+
+            <View
+                android:id="@+id/divider"
+                style="@style/Widget.PizzaApp.Divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:id="@+id/subtotal_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/subtotal"
+                android:textAlignment="textEnd" />
+
+            <Button
+                android:id="@+id/next_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/next"/>
+
+            <Button
+                android:id="@+id/back_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/back"/>
+
+            <Button
+                android:id="@+id/cancel_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel_order" />
+        </LinearLayout>
+    </ScrollView>
+
+</layout>

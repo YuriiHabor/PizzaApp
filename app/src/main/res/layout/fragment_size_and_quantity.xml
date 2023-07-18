@@ -70,7 +70,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="@string/choose_size"
-                    android:textAppearance="?attr/textAppearanceHeadline4" />
+                    android:textAppearance="?attr/textAppearanceHeadline4"
+                    android:textAlignment="center"/>
 
                 <RadioGroup
                     android:layout_width="match_parent"
@@ -96,6 +97,23 @@
                         android:layout_height="wrap_content"
                         android:text="@string/big" />
                 </RadioGroup>
+
+                <View
+                    android:id="@+id/divider"
+                    style="@style/Widget.PizzaApp.Divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"/>
+
+                <TextView
+                    android:id="@+id/subtotal_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/subtotal"
+                    android:textAlignment="textEnd" />
 
                 <Button
                     android:id="@+id/next_button"
